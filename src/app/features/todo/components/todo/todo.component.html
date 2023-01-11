@@ -1,0 +1,11 @@
+<h2>Todo list</h2>
+
+<form class="todo-list">
+  <section
+    *ngFor="let item of todoItems$ | async; let i = index"
+    class="todo-item"
+  >
+    <input id="todo-item-{{ i }}" type="checkbox" />
+    <label for="todo-item-{{ i }}">{{ item.name }}</label>
+  </section>
+</form>
